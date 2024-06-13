@@ -1,0 +1,26 @@
+node {
+    stage "1. verifying and listing the files"
+    sh "ls -alrts"
+    sh "ls"
+    sh "ls -l"
+    sh "ls -al"
+
+    stage "2. update the system"
+    sh "yum update -y"
+    
+    stage "3. create some folders and files"
+    sh "mkdir -p  test-folder"
+    echo "welcome to Besant Technologies, we are writing scripted jenkins file"
+    sh "uptime"
+    sh "date"
+    sh "cal"
+
+    stage "4. view kernel version"
+    sh "uname -a"
+
+    stage "5. linux os release version"
+    sh "cat /etc/os-release"
+
+    stage "6. print the message"
+    echo "welcome to jenkins, we are writing scripted jenkins file"
+}
